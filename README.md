@@ -1,5 +1,5 @@
 # fastlane
-[![Build Status](https://travis-ci.org/data4hub/fastlane.svg?branch=master)](https://travis-ci.org/data4hub/fastlane)
+[![Build Status](https://travis-ci.org/data4hub/docker-fastlane.svg?branch=latest)](https://travis-ci.org/data4hub/docker-fastlane)
 ### Fastlane
 fastlane version
 ```
