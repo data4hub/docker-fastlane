@@ -5,3 +5,4 @@ fastlane version
 ```
 '"$FASTLANE_VERSION"'
 ```
+'
