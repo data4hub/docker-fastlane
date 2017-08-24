@@ -8,4 +8,16 @@ echo '# fastlane
 ```
 '"$JAVA_VERSION"'
 ```
+### Node
+```
+'"$NODE_VERSION"'
+```
+### Npm
+```
+'"$NPM_VERSION"'
+```
+### Yarn
+```
+'"$YARN_VERSION"'
+```
 '
