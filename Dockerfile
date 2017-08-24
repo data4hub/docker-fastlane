@@ -1,6 +1,6 @@
 FROM ruby
 
-ENV FASTLANE_VERSION=2.54.0
+ENV FASTLANE_VERSION=2.54.1
 ENV ANDROID_SDK_HOME /opt/android-sdk-linux
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_SDK_HOME}/tools:${ANDROID_SDK_HOME}/platform-tools:/opt/tools
