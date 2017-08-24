@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+STATUS=$(git status -s | grep -E 'README.tpl|MakeFile|Dockefile')
+if [ -n "$STATUS" ]
+then
+    echo "Updating README.md" && make release 2>&1 > /dev/null
+    git add README.md
+fi
