@@ -8,7 +8,8 @@ ENV PATH ${PATH}:${ANDROID_SDK_HOME}/tools:${ANDROID_SDK_HOME}/platform-tools:/o
 RUN echo "deb http://http.debian.net/debian jessie-backports main" >> /etc/apt/sources.list && \
     dpkg --add-architecture i386 && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-    apt-get install -t jessie-backports openjdk-8-jdk ca-certificates-java libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386 nodejs -y && \
+    apt-get install -t jessie-backports openjdk-8-jdk ca-certificates-java -y && \
+    apt-get install libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386 nodejs -y && \
     gem install fastlane:$FASTLANE_VERSION -NV && \
     cd /opt && \
     echo "Installing android sdk" && wget -q https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz -O android-sdk.tgz && \
