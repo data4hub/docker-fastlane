@@ -9,7 +9,7 @@ RUN echo "deb http://http.debian.net/debian jessie-backports main" >> /etc/apt/s
     dpkg --add-architecture i386 && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install -t jessie-backports openjdk-8-jdk ca-certificates-java -y && \
-    apt-get install libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386 nodejs -y && \
+    apt-get install build-essential libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386 nodejs -y && \
     gem install fastlane:$FASTLANE_VERSION -NV && \
     npm install -g yarn && \
     cd /opt && \
@@ -27,6 +27,7 @@ RUN echo "deb http://http.debian.net/debian jessie-backports main" >> /etc/apt/s
     echo "Installing build-tools-23.0.1" && echo y | android update sdk --no-ui --all --filter build-tools-23.0.1 | grep 'package installed' && \
     echo "Installing build-tools-23.0.2" && echo y | android update sdk --no-ui --all --filter build-tools-23.0.2 | grep 'package installed' && \
     echo "Installing build-tools-23.0.3" && echo y | android update sdk --no-ui --all --filter build-tools-23.0.3 | grep 'package installed' && \
+    echo "Cleaning image..." && \
     rm -f android-sdk.tgz && rm -rf /var/lib/apt-get/lists/* /tmp/* /var/tmp/* && \
     apt-get autoremove -y && apt-get clean
 
